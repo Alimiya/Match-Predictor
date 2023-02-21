@@ -38,11 +38,15 @@ Limitations and Future Work 6
 Introduction
 
 Youtube Video https://youtu.be/--Sn9joYv2c
+
 Github https://github.com/Alimiya/Match-Predictor
+
 Problem
+
 Undoubtedly football is the most popular sport in the world. The purposes of football match prediction are betting, fan engagement and data analysis. Betting and fan engagement are close things, both serve for people entertainment in the sport, while for data analysis is another field for investigation which helps coaches and players to better estimate their strong sides and prepare for matches. This project is going to predict the outcomes of matches using neural networks depending on the past performance of teams.
 
 Literature Review and References
+
 All club statistics were scraped using bs4.BeautifulSoup from https://understat.com/. The website provides useful statistics of every football game in TOP-5 Leagues (EPL, Serie A, Bundesliga, Ligue 1, La Liga).
 
 GitHub solution https://github.com/krishnakartik1/LSTM-footballMatchWinner.
@@ -66,7 +70,9 @@ The model:
 
 
 Data and Methods
+
 Information about the Data
+
 The data includes the average performance of teams' last 5, 10, 15, 25, 38 games (the most valuable ones are last 5 and 10 games, since it shows current condition of teams). So, every team has an array of size 50 showing their stats. The data contains matches from August 2014 until Today.
 
 
@@ -96,17 +102,22 @@ In total we have 15444 matches or data
 With 158 Clubs
 
 ML Model Description
+
 This model is a neural network designed to predict the outcomes of football matches. The model itself consists of several dense layers, each with its own activation function and dropout regularization to prevent overfitting. The first two layers have 128 neurons and use the ReLU activation function, while the next two have 64 neurons and also use ReLU activation. The final layer has 3 neurons and uses the softmax activation function to output the probabilities of each possible outcome of a football match. The model is compiled with the Adam optimizer and the sparse_categorical_crossentropy loss function, which is commonly used for multi-class classification problems. The accuracy metric is used to evaluate the model's performance. Additionally, the EarlyStopping callback is used to stop training if the validation loss does not improve for 5 epochs, preventing overfitting and saving the best weights.
 
 Results
+
 Based on the data input for the football match between Manchester City and RasenBallsport Leipzig, the code predicts of each team winning or the match ending in a draw.
 The overall results indicate that Manchester City is favored to win the match with a chance of 62.63%, while RasenBallsport Leipzig has a lower chance of winning at 15.12%. The probability of the match ending in a draw is 22.25%.
 
 Discussion
+
 Critical Review of the Results
+
 The results of the match predictions using the provided data show that Manchester City has a higher probability of winning than RasenBallsport Leipzig. The predicted probabilities for each team and the draw seem to be based on a neural network model, which has been trained on historical data. However, It is important to note that such predictions can be influenced by many other factors, such as player injuries, team form, weather conditions, tactical changes, and other unforeseen circumstances. Therefore, while these predictions provide some insight into the likely outcome of the match, they should be viewed as estimates, rather than definitive results.
 
 Limitations and Future Work
+
 1)The project only relies on statistical information of teams, it does not include advanced stats or human factors, mental, social and other states of teams. Also, it does not estimate players skill, or starting XI (sometimes coaches may use alternative squads for invaluable games). However, depending on stats and additional human thought may bring to closest outcome.
 
 The model still needs boost in accuracy. This can be accomplished by adding more training data, and using better model architecture.
