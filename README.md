@@ -36,6 +36,8 @@ Critical Review of the Results 5
 Limitations and Future Work 6
 
 Introduction
+Youtube Video https://youtu.be/--Sn9joYv2c
+Github https://github.com/Alimiya/Match-Predictor
 Problem
 Undoubtedly football is the most popular sport in the world. The purposes of football match prediction are betting, fan engagement and data analysis. Betting and fan engagement are close things, both serve for people entertainment in the sport, while for data analysis is another field for investigation which helps coaches and players to better estimate their strong sides and prepare for matches. This project is going to predict the outcomes of matches using neural networks depending on the past performance of teams.
 
